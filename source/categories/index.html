@@ -1,0 +1,11 @@
+---
+layout: page
+title: Categories
+footer: false
+---
+          <div id="blog-categories">{% for category in site.categories sort %}
+            <h2><a class="category" href="/categories/{{ category[0] | downcase }}/">{{ category[0] }}</a></h2>
+            <article>
+{% include category_post.html %}
+            </article>{% endfor %}
+          </div>

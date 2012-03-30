@@ -1,0 +1,52 @@
+url: http://kcblog.net
+title: KCBlog
+subtitle: A personal technology weblog for all geeks
+author: Chin Lee
+description: KCBlog is a personal technology weblog for all geeks. At here I share my development experience
+
+date_format: "%d %B %Y"
+
+subscribe_rss: /atom.xml
+
+permalink: /:year/:month/:day/:title/
+source: source
+destination: /var/www/octopress
+plugins: plugins
+code_dir: downloads/code
+category_dir: categories
+markdown: rdiscount
+pygments: false
+
+paginate: 10
+recent_posts: 10
+excerpt_link: "Read on &rarr;"
+
+titlecase: true
+
+default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.html, asides/googleplus.html]
+
+github_user: kwangchin
+github_repo_count: 5
+github_show_profile_link: true
+github_skip_forks: true
+
+twitter_user: 
+twitter_tweet_count: 5
+twitter_show_replies: false
+twitter_follow_button: true
+twitter_show_follower_count: false
+twitter_tweet_button: true
+
+google_plus_one: true
+google_plus_one_size: medium
+
+googleplus_user: kwangchin
+googleplus_hidden: false
+
+disqus_short_name: kcblognet
+disqus_show_comment_count: true
+
+google_analytics_tracking_id: UA-29244439-1
+
+# Facebook Like
+facebook_like: true

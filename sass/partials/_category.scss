@@ -1,0 +1,42 @@
+#blog-categories {
+  a {
+    color: inherit;
+    font-weight: normal;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    @include hover-link;
+    color: $link-color-hover;
+  }
+  
+  article {
+    padding-left: 3em;
+    
+    h3 {
+      background: $img-border top left repeat-x;
+      padding-top: 0.8em;
+    }
+    
+    h3:first-child {
+      background: none;
+      padding-top: 0;
+    }
+    
+    article {
+      padding-top: 0;
+    }
+    
+    footer {
+      color: $text-color-light;
+      margin-top: 0.5em;
+      padding-bottom: 1em;
+      
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  h2 { margin-bottom: 0.5em; }
+}

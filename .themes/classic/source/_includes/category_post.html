@@ -1,0 +1,6 @@
+{% for post in category[1] %}               <h3><a href="{{ site.url }}{{ post.url }}">{{post.title}}</a></h3>{% if category != '0' %}
+            <footer>
+{% include post/author.html %}
+{% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+{% include post/categories.html %}
+            </footer>{% endif %}{% endfor %}
