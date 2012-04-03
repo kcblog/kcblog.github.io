@@ -1,0 +1,10 @@
+---
+title : Sitemap
+---
+http://kcblog.net/
+http://kcblog.net/archives/
+http://kcblog.net/categories/
+http://kcblog.net/about/
+http://kcblog.net/contact/
+http://kcblog.net/atom.xml{% for post in site.posts %}
+{{site.url}}{{ post.url }}{% endfor %}
