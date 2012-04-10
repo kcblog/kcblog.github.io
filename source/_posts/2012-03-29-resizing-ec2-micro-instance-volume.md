@@ -19,8 +19,6 @@ none                  297M     0  297M   0% /run/shm
 
 Took me some time to upgrade the volume and would like to share with all.
 
-<!-- more -->
-
 ### Resizing Volume in EC2
 
 First, login onto **AWS Management Console**, navigate to **EC2** tab, and follow by **Elastic Block Store** > **Volumes**.

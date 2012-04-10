@@ -12,8 +12,6 @@ I am happy to get to know about Git. [Git](http://git-scm.com/) is a free, open 
 
 Hosting with Git is easy, and it is a distributed version control system where you can have your codes committed to local or remotes. Git copy all of the data containing branches, tags and stored locally in client's system in order to switch between branches in seconds. With Git, you can work offline, by committing your codes locally and push to the remotes whenever you have internet connections.
 
-<!-- more -->
-
 ## Requirements
 
 - Linux or Unix based system

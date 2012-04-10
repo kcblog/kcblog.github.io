@@ -18,8 +18,6 @@ Here I created [SVG Gradient Maker](http://svggradmaker.kcblog.net/) to create c
 - Accepts multiple colour offsets in percentages
 - More coming soon!
 
-<!-- more -->
-
 ### How to use?
 
 - Pick a direction

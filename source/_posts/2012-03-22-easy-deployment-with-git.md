@@ -9,8 +9,6 @@ I wrote a [GitHub Post-Receive Deployment Hook](https://github.com/kwangchin/Git
 
 Follow the instruction in the `README` to setup your `stage` and `prod` branches.
 
-<!-- more -->
-
 ## Making Your Life Easier
 
 You are on `master` branch by default, and this is the development branch for all your commits and pushes.

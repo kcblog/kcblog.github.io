@@ -13,8 +13,6 @@ description: Start up your Yii Project with Git as version control system.
 - Yii framework v1.1.10 as of today
 - Web server with PHP 5.1 or higher (optional)
 
-<!-- more -->
-
 ## Checkout Yii Framework
 
 First you need to checkout the framework from Yii repository. Checking out with Git allows you to have collaborations, updates and fast switching of versions. You can skip this step if you have Yii ready in your machine.

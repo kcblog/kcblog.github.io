@@ -13,8 +13,6 @@ description: We describe how to start a zend framework project from scratch.
 
 Download latest Zend Framework from [Zend Framework](http://framework.zend.com/) website and extract to your working directory.
 
-<!-- more -->
-
 ## Create the Project Directory
 
 First, create a new directory in your working directory for the project and navigate into it.

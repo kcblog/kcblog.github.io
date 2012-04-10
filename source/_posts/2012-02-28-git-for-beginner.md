@@ -18,8 +18,6 @@ $ git config --global user.email "user@test.com"
 
 You have to do this once and Git will remember you every time you commit your works.
 
-<!-- more -->
-
 ## Copy of the Project
 
 With `git clone` you can simply get a copy of the project you want to work on.

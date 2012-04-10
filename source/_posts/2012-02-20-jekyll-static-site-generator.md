@@ -13,8 +13,6 @@ description: Jekyll is being introduced and what are the pros and cons about sta
 
 A Static Site Generator reads through configs, markups, templates and generates static HTML website as output. These generated static HTML website is then served by your web server. Unlike the old school blogs, you can now customize your blogs with ease.
 
-<!-- more -->
-
 ### Advantages
 
 * Code Versioning - Better control with GitHub as the platform, to be able to revert changes or recover from disaster easily

@@ -7,8 +7,6 @@ description: Apple today introduced the new iPad, the third generation of its ca
 ---
 Apple announced the new iPad, featuring a stunning new Retina display, new A5X processor with quad-core graphics and a 5 megapixel camera and 1080p HD video.
 
-<!-- more -->
-
 ## Retina Display
 
 This could be the most amazing part of the new iPad. High-resolution screen with a 2048-by-1536-pixel resolution at 264 pixels per inch (ppi) is potentially the highest resolution tablet in the world.

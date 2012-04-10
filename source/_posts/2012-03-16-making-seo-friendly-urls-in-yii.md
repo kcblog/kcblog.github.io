@@ -7,8 +7,6 @@ description: In this guide, we show how to make SEO-friendly URLs in Yii.
 ---
 After [Starting Up Yii Project with Git](http://kcblog.net/2012/03/01/starting-up-yii-project-with-git.html) you can try open up your browser and navigate to [http://www.example.com/project/](http://www.example.com/project/) and you will then notice the links are like [http://www.example.com/project/index.php?r=site/contact](http://www.example.com/project/index.php?r=site/contact) and [http://www.example.com/project/index.php?r=site/page&view=about](http://www.example.com/project/index.php?r=site/page&view=about).
 
-<!-- more -->
-
 ##  URL Routes
 
 This can be archived easily via uncommenting the `urlManager` located in `./protected/config/main.php`.
