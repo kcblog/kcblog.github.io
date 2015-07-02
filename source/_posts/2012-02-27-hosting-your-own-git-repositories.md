@@ -22,11 +22,11 @@ Hosting with Git is easy, and it is a distributed version control system where y
 
 SSH to the server, create the repository and create a bare Git repository.
 
-{% codeblock %}
+{% highlight %}
 $ mkdir test.git
 $ cd test.git
 $ git --bare init
-{% endcodeblock %}
+{% endhighlight %}
 
 That is all for the server side.
 
@@ -34,26 +34,26 @@ That is all for the server side.
 
 Open up Terminal, create a working directory, create an empty Git repository.
 
-{% codeblock %}
+{% highlight %}
 $ mkdir test
 $ cd test
 $ git init
-{% endcodeblock %}
+{% endhighlight %}
 
 We have created an empty Git repository. We will now add a file and commit the changes.
 
-{% codeblock %}
+{% highlight %}
 $ touch README
 $ git add README
 $ git commit -a -m 'first commit'
-{% endcodeblock %}
+{% endhighlight %}
 
 We have committed the changes. We will now setup the remote server and push to the server.
 
-{% codeblock %}
+{% highlight %}
 $ git remote add origin git@server.com:test.git
 $ git push origin master
-{% endcodeblock %}
+{% endhighlight %}
 
 That is all for the first commit. Each and every time you want to push the changes to remotes, you can just do `git push`
 
