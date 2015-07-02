@@ -17,27 +17,27 @@ Download latest Zend Framework from [Zend Framework](http://framework.zend.com/)
 
 First, create a new directory in your working directory for the project and navigate into it.
 
-{% codeblock %}
+{% highlight %}
 $ mkdir zf-project
 $ cd zf-project
-{% endcodeblock %}
+{% endhighlight %}
 
 Next, we will need to create a directory **application** to hold all the controllers, models, views and configs, etc.
 
 Also create a **.htaccess** in the root like this:
 
-{% codeblock %}
+{% highlight %}
 SetEnv APPLICATION_ENV "development"
 
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^.*$ index.php [L,QSA]
-{% endcodeblock %}
+{% endhighlight %}
 
 And create an **index.php** in the root like this:
 
-{% codeblock lang:php %}
+{% highlight lang:php %}
 <?php
 defined('APPLICATION_PATH')
     || define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/application'));
@@ -58,7 +58,7 @@ $application = new Zend_Application(
 );
 $application->bootstrap()
             ->run();
-{% endcodeblock %}
+{% endhighlight %}
 
 ## Create the Project Structure
 
@@ -74,7 +74,7 @@ Create these directories and sub-directories in `application/` directory:
 > > * index
 > * template
 
-{% codeblock %}
+{% highlight %}
 $ mkdir application/configs
 $ mkdir application/controllers
 $ mkdir application/models
@@ -84,13 +84,13 @@ $ mkdir application/views/scripts
 $ mkdir application/views/scripts/index
 $ mkdir application/views/scripts/error
 $ mkdir application/views/template
-{% endcodeblock %}
+{% endhighlight %}
 
 ## Create the Application Configurations File
 
 Create config **application.ini** under `application/configs/` directory:
 
-{% codeblock %}
+{% highlight %}
 [development]
 phpSettings.display_startup_errors = 1
 phpSettings.display_errors         = 1
@@ -107,37 +107,37 @@ phpSettings.display_errors         = 0
 [production : development]
 phpSettings.display_startup_errors = 1
 phpSettings.display_errors         = 1
-{% endcodeblock %}
+{% endhighlight %}
 
 ## Create the Application Controllers
 
 Create controller **IndexController.php** under `application/controllers/` directory:
 
-{% codeblock lang:php %}
+{% highlight lang:php %}
 <?php
 class IndexController extends Zend_Controller_Action {
   public function indexAction() {
   
   }
 }
-{% endcodeblock %}
+{% endhighlight %}
 
 Create controller **ErrorController.php** under `application/controllers/` directory:
 
-{% codeblock lang:php %}
+{% highlight lang:php %}
 <?php
 class ErrorController extends Zend_Controller_Action {
   public function errorAction() {
   
   }
 }
-{% endcodeblock %}
+{% endhighlight %}
 
 ## Create the Default Template
 
 Create header **header.phtml** under `application/views/template/` directory:
 
-{% codeblock lang:php %}
+{% highlight lang:php %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -155,11 +155,11 @@ Create header **header.phtml** under `application/views/template/` directory:
     </div>
     <div class="row">
       <div class="span12">
-{% endcodeblock %}
+{% endhighlight %}
 
 Create footer **footer.phtml** under `application/views/template/` directory:
 
-{% codeblock lang:php %}
+{% highlight lang:php %}
 
         <hr />
         <footer>
@@ -170,30 +170,30 @@ Create footer **footer.phtml** under `application/views/template/` directory:
   </div>
 </body>
 </html>
-{% endcodeblock %}
+{% endhighlight %}
 
 Create template **layout.html** under `application/views/template` directory to combine both header and footer:
 
-{% codeblock lang:php %}
+{% highlight lang:php %}
 <?php
 include_once('header.phtml');
 echo $this->layout()->content;
 include_once('footer.phtml');
-{% endcodeblock %}
+{% endhighlight %}
 
 ## Create the View for Controllers
 
 Create view **index.phtml** for **IndexController** under `application/views/index/` directory:
 
-{% codeblock lang:php %}
+{% highlight lang:php %}
 <h2>Welcome to Zend Framework Tutorial!</h2>
-{% endcodeblock %}
+{% endhighlight %}
 
 Create view **error.phtml** for **ErrorController** under `application/views/error/` directory:
 
-{% codeblock lang:php %}
+{% highlight lang:php %}
 <h2>An error occurred!</h2>
-{% endcodeblock %}
+{% endhighlight %}
 
 ## Project Ready
 
