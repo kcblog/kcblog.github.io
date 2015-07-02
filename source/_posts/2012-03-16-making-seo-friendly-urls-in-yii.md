@@ -11,7 +11,7 @@ After [Starting Up Yii Project with Git](http://kcblog.net/2012/03/01/starting-u
 
 This can be archived easily via uncommenting the `urlManager` located in `./protected/config/main.php`.
 
-{% codeblock lang:php %}
+{% highlight lang:php %}
 // uncomment the following to enable URLs in path-format
 'urlManager'=>array(
   'urlFormat'=>'path',
@@ -21,7 +21,7 @@ This can be archived easily via uncommenting the `urlManager` located in `./prot
     '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
   ),
 ),
-{% endcodeblock %}
+{% endhighlight %}
 
 Refresh the page and you will notice that the URLs have been changed to [http://www.example.com/project/index.php/site/contact](http://www.example.com/project/index.php/site/contact) and [http://www.example.com/project/index.php/site/page?view=about](http://www.example.com/project/index.php/site/page?view=about).
 
@@ -29,7 +29,7 @@ Refresh the page and you will notice that the URLs have been changed to [http://
 
 You can further cleanup the URLs by removing `index.php` and adding a suffix `.html` to the URLs.
 
-{% codeblock lang:php %}
+{% highlight lang:php %}
 // uncomment the following to enable URLs in path-format
 'urlManager'=>array(
   'urlFormat'=>'path',
@@ -41,18 +41,18 @@ You can further cleanup the URLs by removing `index.php` and adding a suffix `.h
     '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
   ),
 ),
-{% endcodeblock %}
+{% endhighlight %}
 
 Refresh the page and you will notice that the URLs have been changed to [http://www.example.com/project/site/contact.html](http://www.example.com/project/site/contact.html) and [http://www.example.com/project/site/page.html?view=about](http://www.example.com/project/site/page.html?view=about).
 
 Notice that the generated URLs will get a 404 Error if you don't add the follow `.htaccess` file:
 
-{% codeblock %}
+{% highlight %}
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)\?*$ index.php/$1 [L,QSA]
-{% endcodeblock %}
+{% endhighlight %}
 
 You can now enjoy the prettified SEO-friendly URLs.
 
