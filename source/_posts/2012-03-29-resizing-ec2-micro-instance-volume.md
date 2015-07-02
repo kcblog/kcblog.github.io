@@ -7,7 +7,7 @@ description: Step by step on how to resize an EC2 micro instance volume on Amazo
 ---
 My EC2 micro instance volume growing fast and it comes to a critical level now:
 
-{% codeblock %}
+{% highlight %}
 $ df -h
 Filesystem            Size  Used Avail Use% Mounted on
 /dev/xvda1            7.9G  7.2G  343M  96% /
@@ -15,7 +15,7 @@ udev                  289M  4.0K  289M   1% /dev
 tmpfs                 119M  164K  119M   1% /run
 none                  5.0M     0  5.0M   0% /run/lock
 none                  297M     0  297M   0% /run/shm
-{% endcodeblock %}
+{% endhighlight %}
 
 Took me some time to upgrade the volume and would like to share with all.
 
@@ -35,9 +35,9 @@ After the progress is done, create a volume from the snapshot by giving a new si
 
 Next, you will need to shutdown and stop your instance before you can detach the old volume and attach the new volume.
 
-{% codeblock %}
+{% highlight %}
 $ sudo shutdown now
-{% endcodeblock %}
+{% endhighlight %}
 
 Navigate to **Instances** to stop your instance. (Stop means Stop, not Terminate or your instance will be gone)
 
@@ -55,13 +55,13 @@ Start your instance again from **Instances**.
 
 Login into shell before proceeding to the last step.
 
-{% codeblock %}
+{% highlight %}
 $ sudo resize2fs /dev/xvda1
-{% endcodeblock %}
+{% endhighlight %}
 
 After a short while, you are done!
 
-{% codeblock %}
+{% highlight %}
 $ df -h
 Filesystem            Size  Used Avail Use% Mounted on
 /dev/xvda1             20G  7.2G   12G  39% /
@@ -69,4 +69,4 @@ udev                  289M  4.0K  289M   1% /dev
 tmpfs                 119M  164K  119M   1% /run
 none                  5.0M     0  5.0M   0% /run/lock
 none                  297M     0  297M   0% /run/shm
-{% endcodeblock %}
+{% endhighlight %}

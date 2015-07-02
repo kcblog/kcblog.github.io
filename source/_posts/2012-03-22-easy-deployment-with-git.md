@@ -17,29 +17,29 @@ Next you might want to have `stage` branch for testing purposes.
 
 ### Creating `stage` branch
 
-{% codeblock %}
+{% highlight %}
 $ git branch stage
-{% endcodeblock %}
+{% endhighlight %}
 
 ### Pushing `stage` branch
 
-{% codeblock %}
+{% highlight %}
 $ git push origin stage
-{% endcodeblock %}
+{% endhighlight %}
 
 You have a `prod` branch for the production site.
 
 ### Creating `prod` branch
 
-{% codeblock %}
+{% highlight %}
 $ git branch prod
-{% endcodeblock %}
+{% endhighlight %}
 
 ### Pushing `prod` branch
 
-{% codeblock %}
+{% highlight %}
 $ git push origin prod
-{% endcodeblock %}
+{% endhighlight %}
 
 ## Results
 

@@ -17,7 +17,7 @@ description: Start up your Yii Project with Git as version control system.
 
 First you need to checkout the framework from Yii repository. Checking out with Git allows you to have collaborations, updates and fast switching of versions. You can skip this step if you have Yii ready in your machine.
 
-{% codeblock %}
+{% highlight %}
 $ git clone https://github.com/yiisoft/yii.git
 Cloning into yii...
 remote: Counting objects: 41897, done.
@@ -25,24 +25,24 @@ remote: Compressing objects: 100% (9615/9615), done.
 remote: Total 41897 (delta 31528), reused 41775 (delta 31415)
 Receiving objects: 100% (41897/41897), 15.87 MiB | 138 KiB/s, done.
 Resolving deltas: 100% (31528/31528), done.
-{% endcodeblock %}
+{% endhighlight %}
 
 Quick switching into the newly checkout Yii framework.
 
-{% codeblock %}
+{% highlight %}
 $ cd yii
-{% endcodeblock %}
+{% endhighlight %}
 
 You can check the current version of Yii framework by issuing the commands below.
 
-{% codeblock %}
+{% highlight %}
 $ php -r "include('framework/YiiBase.php'); echo YiiBase::getVersion() . PHP_EOL;"
 1.1.11-dev
-{% endcodeblock %}
+{% endhighlight %}
 
 Yii versions are in tags and you can have a view of all the versions with `git tag`.
 
-{% codeblock %}
+{% highlight %}
 $ git tag
 1.0.0
 1.0.1
@@ -74,11 +74,11 @@ $ git tag
 1.1a
 1.1b
 1.1rc
-{% endcodeblock %}
+{% endhighlight %}
 
 Now we are going to switch the version to 1.1.10 with `git checkout`, which is the latest stable version.
 
-{% codeblock %}
+{% highlight %}
 $ git checkout 1.1.10
 Note: checking out '1.1.10'.
 
@@ -92,26 +92,26 @@ do so (now or later) by using -b with the checkout command again. Example:
   git checkout -b new_branch_name
 
 HEAD is now at 25b0d9e... 1.1.10 release.
-{% endcodeblock %}
+{% endhighlight %}
 
 We now have the Yii framework v1.1.10 and we can double check again.
 
-{% codeblock %}
+{% highlight %}
 $ php -r "include('framework/YiiBase.php'); echo YiiBase::getVersion() . PHP_EOL;"
 1.1.10
-{% endcodeblock %}
+{% endhighlight %}
 
 Congratulations! Do not forget to go back to parent directory.
 
-{% codeblock %}
+{% highlight %}
 $ cd ..
-{% endcodeblock %}
+{% endhighlight %}
 
 ## Create Your Yii Project
 
 With Yii console script, it is pretty easy to create your Yii projects.
 
-{% codeblock %}
+{% highlight %}
 $ yii/framework/yiic webapp project
 Create a Web application under '/var/www/project'? [yes|no] y
 ...
@@ -121,26 +121,26 @@ Your application has been created successfully under /var/www/project.
 $ cd project
 $ ls -a
 .		..		assets		css		images		index-test.php	index.php	protected	themes
-{% endcodeblock %}
+{% endhighlight %}
 
 Your project is now created! We will have to initialize Git repository.
 
-{% codeblock %}
+{% highlight %}
 $ git init
 Initialized empty Git repository in /var/www/project/.git/
 $ ls -a
 .		..		.git		assets		css		images		index-test.php	index.php	protected	themes
-{% endcodeblock %}
+{% endhighlight %}
 
 There are some empty directories in your newly created project and we will need to add .gitignore into those directories.
 
-{% codeblock %}
+{% highlight %}
 $ find . -type d -empty -exec touch {}/.gitignore \;
-{% endcodeblock %}
+{% endhighlight %}
 
 We can now add the files into Git repository and commit for the first time.
 
-{% codeblock %}
+{% highlight %}
 $ git add *
 $ git commit -a -m 'first commit'
 [master (root-commit) 6c0b79b] first commit
@@ -194,6 +194,6 @@ $ git commit -a -m 'first commit'
  create mode 100644 themes/classic/views/layouts/.gitignore
  create mode 100644 themes/classic/views/site/.gitignore
  create mode 100644 themes/classic/views/system/.gitignore
-{% endcodeblock %}
+{% endhighlight %}
 
 Check out my previous post, [Hosting Your Own Git Repositories](http://kcblog.net/2012/02/27/hosting-your-own-git-repositories.html) to host your repositories remotely.

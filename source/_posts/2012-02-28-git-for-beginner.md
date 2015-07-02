@@ -11,10 +11,10 @@ After [Hosting Your Own Git Repositories](http://kcblog.net/2012/02/27/hosting-y
 
 Setting up your display name and email address show in Git commits.
 
-{% codeblock %}
+{% highlight %}
 $ git config --global user.name "Your Name"
 $ git config --global user.email "user@test.com"
-{% endcodeblock %}
+{% endhighlight %}
 
 You have to do this once and Git will remember you every time you commit your works.
 
@@ -22,7 +22,7 @@ You have to do this once and Git will remember you every time you commit your wo
 
 With `git clone` you can simply get a copy of the project you want to work on.
 
-{% codeblock %}
+{% highlight %}
 $ git clone git@server.com:test.git
 Cloning into test...
 git@server.com's password:
@@ -33,13 +33,13 @@ Receiving objects: 100% (6/6), done.
 $ cd test
 $ ls -a
 .		..		.git		README		index.html
-{% endcodeblock %}
+{% endhighlight %}
 
 ## Add Files into Project
 
 With `git add` you are able to add files to the project's staging area.
 
-{% codeblock %}
+{% highlight %}
 $ echo "<?php phpinfo();" > info.php
 $ ls -a
 .		..		.git		README		index.html	info.php
@@ -56,24 +56,24 @@ index 0000000..c4837a3
 +++ b/info.php
 @@ -0,0 +1 @@
 +<?php phpinfo();
-{% endcodeblock %}
+{% endhighlight %}
 
 ## Create Snapshot of the Staging Area
 
 After adding files into staging area, you can now use `git commit` to create snapshot of the changes.
 
-{% codeblock %}
+{% highlight %}
 $ git commit -a -m 'add info file'
 [master a591ab6] add info file
  1 files changed, 1 insertions(+), 0 deletions(-)
  create mode 100644 info.php
-{% endcodeblock %}
+{% endhighlight %}
 
 ## Push Commits to Remote Server
 
 Commits are done locally before a `git push` command is given.
 
-{% codeblock %}
+{% highlight %}
 $ git push
 git@server.com's password: 
 Counting objects: 4, done.
@@ -83,13 +83,13 @@ Writing objects: 100% (3/3), 320 bytes, done.
 Total 3 (delta 0), reused 2 (delta 0)
 To git@server.com:test.git
    c62c56b..a591ab6  master -> master
-{% endcodeblock %}
+{% endhighlight %}
 
 ## Fetching Updates from Remote Server
 
 Power of the collaboration system, with `git pull` your local codes are to be sync'ed with other collaborators.
 
-{% codeblock %}
+{% highlight %}
 $ git pull
 git@server.com's password: 
 remote: Counting objects: 5, done.
@@ -102,7 +102,7 @@ Updating a591ab6..5781fe7
 Fast-forward
  info.php |    4 +++-
  1 files changed, 3 insertions(+), 1 deletions(-)
-{% endcodeblock %}
+{% endhighlight %}
 
 The command `git pull` combines `git fetch` with `git merge` commands, where will fetch the updates and merge into your local codes.
 
