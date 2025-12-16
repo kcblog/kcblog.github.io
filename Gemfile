@@ -15,4 +15,4 @@ group :development do
   gem 'liquid', '4.0.4'
 end
 
-gem 'sinatra', '4.1.1'
+gem 'sinatra', '4.2.0'
